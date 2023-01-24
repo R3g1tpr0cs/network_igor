@@ -1,0 +1,10 @@
+{% extends 'main/layout.html' %}
+
+{% block content %}
+    <div class="features">
+        <h1>Запросы команд к оборудованию</h1>
+        <p>На этой странице Вы можете создавать запросы к оборудованию ЛВС и получать ответы</p>
+        <a href="{% url 'commands_work' %}" class="btn btn-warning">Начать</a>
+{% endblock content %}
+
+{% block title %}Networks manager{% endblock title %}

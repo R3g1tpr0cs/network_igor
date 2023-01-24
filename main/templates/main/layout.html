@@ -1,0 +1,30 @@
+{% load static %}
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.5">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{% block title %}{% endblock  %}</title>
+    <link rel="stylesheet" href="{% static 'main/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'main/css/main.css' %}">
+</head>
+<body>
+    <aside>
+        <img src="{% static 'main/img/logo.png' %}" alt="Логотип">
+        <span class="logo">Networks manager</span>
+        <h3>Навигация</h3>
+        <ul>
+            <a href="{% url 'main' %}"><li>Главная</li></a>
+            <a href="{% url 'commands' %}"><li>Запросы к оборудованию</li></a>
+            <a href="{% url 'ppr' %}"><li>ППР</li></a>
+            <a href="{% url 'switches' %}"><li>Список коммутаторов</li></a>
+            <a href="{% url 'about' %}"><li>О приложении</li></a>
+            <a href="{% url 'create' %}"><li><button class="btn btn-info"><i class="fas fa-plus-circle"></i>Добавление оборудования</li></a>
+    </aside>    
+    <main>    
+        {% block content %}
+        {% endblock %}
+    </main>
+</body>
+</html>

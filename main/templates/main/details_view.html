@@ -1,0 +1,16 @@
+{% extends 'main/layout.html' %}
+
+{% block content %}
+    <div class="features">
+        <h1>{{ switch.name }}</h1>
+        <p>{{ switch.vendor }}</p>
+        <p>{{ switch.model }}</p>
+        <p>{{ switch.soft_version }}</p>
+        <p>{{ switch.serial_number }}</p>
+        <p>{{ switch.ip }}</p>
+        <p>{{ switch.location }}</p>
+        <p>{{ switch.buiding }}</p>
+    </div>
+{% endblock content %}
+
+{% block title %}Networks manager{% endblock title %}

@@ -1,0 +1,10 @@
+{% extends 'main/layout.html' %}
+
+{% block content %}
+    <div class="features">
+        <h1>Проведение ППР</h1>
+        <p>На этой странице Вы можете начать проведение ППР на коммутаторах ЛВС</p>
+        <a href="{% url 'ppr_work' %}"><button class="btn btn-danger"><i class="fas fa-plus-circle"></i>Начать</a>
+{% endblock content %}
+
+{% block title %}Networks manager{% endblock title %}

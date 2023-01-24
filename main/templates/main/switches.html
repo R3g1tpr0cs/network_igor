@@ -1,0 +1,17 @@
+{% extends 'main/layout.html' %}
+
+{% block content %}
+    <div class="features">
+        <h1>Список имеющихся коммутаторов</h1>
+        {% for el in equipment %}
+            <div>
+                <p>{{ el.name }} {{ el.vendor }} {{ el.model }} {{ el.soft_version }} {{ el.serial_number }} {{ el.ip }} {{ el.location }} {{ el.buiding }}</p>
+                <a href="{% url 'switches-detail' el.id %}" class="btn btn-success">Подробнее</a>
+                <a href="{% url 'switches-update' el.id %}" class="btn btn-warning">Изменить</a>
+                <a href="{% url 'switches-delete' el.id %}" class="btn btn-danger">Удалить</a>
+            </div>    
+        {% endfor %}
+    </div>
+{% endblock content %}
+
+{% block title %}Networks manager{% endblock title %}

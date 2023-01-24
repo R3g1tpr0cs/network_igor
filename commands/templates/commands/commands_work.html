@@ -1,0 +1,13 @@
+{% extends 'main/layout.html' %}
+
+{% block content %}
+    <div class="features">
+        <h1>Убедитесь, что все команды введены правильно и не нанесут вред работоспособности сети</h1>
+        <form method="post">
+            <input type="text" placeholder="Ввод команд" class="form-control"><br>
+            <input type="text" placeholder="Вывод результата" class="form-control"><br>
+            <button class="btn btn-danger" type="submit">Запрос</button>
+        </form>
+{% endblock content %}
+
+{% block title %}Networks manager{% endblock title %}

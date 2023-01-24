@@ -1,0 +1,14 @@
+{% extends 'main/layout.html' %}
+
+{% block content %}
+    <div class="features">
+        <h1>Проведение ППР</h1>
+        {% for el in equipment %}
+            <div>
+                <p>{{ el.name }} {{ el.vendor }} {{ el.model }} {{ el.ip }}</p>
+            </div>    
+        {% endfor %}
+    </div>
+{% endblock content %}
+
+{% block title %}Networks manager{% endblock title %}

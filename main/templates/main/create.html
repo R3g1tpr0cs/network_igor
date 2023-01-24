@@ -1,0 +1,21 @@
+{% extends 'main/layout.html' %}
+
+{% block content %}
+    <div class="features">
+        <h1>На этой странице можно добавить оборудование к уже имеющемуся списку</h1>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.name }}<br>
+            {{ form.vendor }}<br>
+            {{ form.model }}<br>
+            {{ form.soft_version }}<br>
+            {{ form.serial_number }}<br>
+            {{ form.ip }}<br>
+            {{ form.location }}<br>
+            {{ form.buiding }}<br>
+            <span>{{ error }}</span>
+            <button class="btn btn-success" type="submit">Добавить</button>
+        </form>
+{% endblock content %}
+
+{% block title %}Networks manager{% endblock title %}

@@ -1,0 +1,13 @@
+{% extends 'main/layout.html' %}
+
+{% block content %}
+    <div class="features">
+        <h1>{{ title }}</h1>
+        <p>Этот сайт позволяет взаимодействовать с сетевым оборудованием ЛВС. Здесь Вы можете отправлять запросы к коммутаторам, проводить массовую настройку оборудования, а также проводить ППР.</p>
+        <a href="{% url 'commands' %}"><button class="btn btn-warning">Запросы к оборудованию</a>
+        <a href="{% url 'ppr' %}"><button class="btn btn-warning">Проведение ППР</a>
+    </div>
+    
+{% endblock content %}
+
+{% block title %}Networks manager{% endblock title %}
